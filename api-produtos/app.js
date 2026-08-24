@@ -33,5 +33,10 @@ if (configuracaoCarregada && ausentes.length > 0) {
     turma: process.env.TURMA,
     projeto: "api-produtos",
     ambiente: process.env.NODE_ENV || 'development',
+    node: process.version,
+    sistema: `${process.platform} ${process.arch}`,
+    diretorio: process.cwd(),
+    portaConfigurada: process.env.PORT
   });
+  console.log('Ambiente configurado com sucesso!');
 }
