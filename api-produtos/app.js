@@ -13,13 +13,25 @@ if (arquivoDeConfiguracao) {
   }
 }
 
-const obrigatorias = ['PORT', 'NOME_ALUNO', 'TURMA'];
+const obrigatorias = ["PORT", "NOME_ALUNO", "TURMA"];
 const ausentes = [];
 
-for(const nome of obrigatorias){
-    const valor = process.env[nome];
+for (const nome of obrigatorias) {
+  const valor = process.env[nome];
 
-    if(typeof valor !== 'string' || valor.trim()===''){
-        ausentes.push
-    }
+  if (typeof valor !== "string" || valor.trim() === "") {
+    ausentes.push;
+  }
+}
+
+if (configuracaoCarregada && ausentes.length > 0) {
+  console.error(`Configure no .env: ${ausentes.join(",")}`);
+  process.exitCode = 1;
+} else if (configuracaoCarregada) {
+  console.table({
+    estudante: process.env.NOME_ALUNO,
+    turma: process.env.TURMA,
+    projeto: "api-produtos",
+    ambiente: process.env.NODE_ENV || 'development',
+  });
 }
