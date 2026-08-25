@@ -1,11 +1,9 @@
-const nomeInformado = process.argv[0];
-const turmaInformada = process.argv[1];
+const nomeInformado = process.argv[2];
+const turmaInformada = process.argv[3];
 
-if (!nomeInformado || !turmaInformada) {
-  console.error(
-    "PENDENTE: valide nome e turma antes de confirmar a inscrição.",
-  );
+if(!nomeInformado || !turmaInformada){
+  console.error('PENDENTE: Informe o nome do aluno e a turma correspondente.');
   process.exitCode = 1;
-} else {
-  console.log("Entrada recebida:", { nomeInformado, turmaInformada });
+}else {
+  console.log(`ACESSO PERMITIDO! Usuário: ${nomeInformado} | Turma: ${turmaInformada}`);
 }
