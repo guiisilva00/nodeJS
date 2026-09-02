@@ -8,19 +8,19 @@ function consultarProduto(id) {
 }
 
 // Chamda por Promise
-// consultarProduto(1).then((produto) => console.log("Suceso:", produto)).catch((erro)=>console.log('Falha: ', erro.message))
-
+consultarProduto(1)
+  .then((produto) => console.log("Suceso:", produto))
+  .catch((erro) => console.log("Falha: ", erro.message));
 
 // Chamda por Async
 async function executar(id) {
-    try {
-        const produto = await
-        consultarProduto(id);
-        console.log('Sucesso: ', produto)
-    } catch(erro){
-        console.eror('Falha: ', erro.message);
-        process.exitCode = 1;
-    }
+  try {
+    const produto = await consultarProduto(id);
+    console.log("Sucesso: ", produto);
+  } catch (erro) {
+    console.eror("Falha: ", erro.message);
+    process.exitCode = 1;
+  }
 }
 
 executar(1);
