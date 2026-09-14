@@ -12,7 +12,7 @@ const ferramentas = [
 export function listarFerramentas(categoria) {
   const ferramentasFiltradas = ferramentas.filter(
     (f) => f.categoria === categoria,
-  );
+  ); 
   if (ferramentasFiltradas.length === 0) {
     throw new Error(`Nenhuma ferramenta encontrada em ${categoria}.`);
   }
