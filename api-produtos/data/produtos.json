@@ -19,5 +19,12 @@
     "preco": 2999,
     "estoque": 5,
     "categoria": "Vídeo"
+  },
+  {
+    "id": 4,
+    "nome": "Monitor LED",
+    "preco": 2999,
+    "estoque": 5,
+    "categoria": "Vídeo"
   }
 ]
