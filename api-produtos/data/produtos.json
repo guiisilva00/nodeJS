@@ -5,5 +5,19 @@
     "preco": 120,
     "estoque": 4,
     "categoria": "Periféricos"
+  },
+  {
+    "id": 2,
+    "nome": "mouse",
+    "preco": 99.9,
+    "estoque": 7,
+    "categoria": "Periféricos"
+  },
+  {
+    "id": 3,
+    "nome": "Monitor LED",
+    "preco": 2999,
+    "estoque": 5,
+    "categoria": "Vídeo"
   }
 ]
