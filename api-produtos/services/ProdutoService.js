@@ -10,10 +10,9 @@ export function criarProdutoService({ produtoModel }) {
             throw new TypeError('ID deve ser um número inteiro positivo');
         }
         const produto = await produtoModel.buscarPorId(id);
-        if (!produto) throw new Error(`Produto ${id} não encontrado.`);
+        if (!produto) throw new Error(`Produto ${id} não encontrado`);
         return produto;
     }
-
     async function criar(dados) {
         const produto = new Produto({ id: 1, ...dados });
         return produtoModel.criar({
@@ -23,6 +22,5 @@ export function criarProdutoService({ produtoModel }) {
             categoria: produto.categoria
         });
     }
-    return { listar, buscarPorId, criar };
+    return { listar, buscarPorId, criar }
 }
-
