@@ -143,3 +143,6 @@ vite.config.ts.timestamp-*
 .vite/
 
 resumo-sessao-api-produtos.md
+
+/dev-utils
+generateInitialToken.js
